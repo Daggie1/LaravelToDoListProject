@@ -1,6 +1,7 @@
 <html>
 <head>
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <title>
 
     </title>
@@ -21,7 +22,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('add_user')}}">Add new Task</a>
+                    <a class="nav-link" href="{{route('add_task')}}">Add new Task</a>
                 </li>
             </ul>
             <span class="navbar-text">

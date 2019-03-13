@@ -1,6 +1,8 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
+@section('title')
+@endsection
 @section('content')
+    @include('patriats.nav')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
