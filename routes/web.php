@@ -11,10 +11,16 @@
 |
 */
 
+
+use App\Http\Controllers\TaskController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('add/','TaskController@add')->name('add_user');
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks.add');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
