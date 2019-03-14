@@ -18,8 +18,15 @@ class CreateTasksTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->date('deadline');
+            $table->unsignedBigInteger('author_id');
             $table->integer('status')->default(0);
             $table->timestamps();
+
+
+            $table->foreign('author_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
+
         });
     }
 
