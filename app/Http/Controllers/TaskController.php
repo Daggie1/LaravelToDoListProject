@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
-<<<<<<< HEAD
+
     public function get_add_task_form(){
         return view('task.add_task_form');
 }
@@ -33,7 +33,6 @@ class TaskController extends Controller
         $task->delete();
         return redirect()->route('home')->with('success', 'task has been deleted successfully!');
     }
-=======
 public function add(){
     return view('tasks.add');
 }
@@ -50,5 +49,5 @@ public function insert(Request $request){
     Task::create($task_data);
     return redirect(route('home'));
 }
->>>>>>> 15df1b252e750635d638ad33723f74795a5b196b
+
 }
