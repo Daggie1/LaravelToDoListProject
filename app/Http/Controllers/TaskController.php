@@ -11,11 +11,14 @@ use Illuminate\Support\Facades\Mail;
 class TaskController extends Controller
 {
 
+<<<<<<< HEAD
+=======
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+>>>>>>> b7ac25b5ae3fc9664a8169235440be2490a3336d
     public function get_add_task_form(){
         return view('tasks.add');
 }
@@ -43,7 +46,10 @@ public function edit($id){
         $task->delete();
         return redirect()->route('home')->with('success', 'task has been deleted successfully!');
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> b7ac25b5ae3fc9664a8169235440be2490a3336d
 public function add(){
     return view('tasks.add');
 }
@@ -71,10 +77,14 @@ public function insert(Request $request){
     });
     return redirect(route('home'));
 }
+<<<<<<< HEAD
+
+=======
     public function check_off($id){
         $task=Task::find($id);
         $task->status = 1;
         $task->save();
         return redirect()->route('home')->with('success', 'task has been checked off successfully!');
     }
+>>>>>>> b7ac25b5ae3fc9664a8169235440be2490a3336d
 }
