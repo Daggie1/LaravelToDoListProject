@@ -68,6 +68,7 @@ public function insert(Request $request){
     # find who you are sending email to.
     $email_to = User::where('id', $userid)->pluck('email')->first();
 
+
     $data = ['task' =>  $task_data];
 
     Mail::send('task_mails/todo_email', $data, function ($message) use ($email_to){

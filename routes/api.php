@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResource('/tasks','Api_controllers\TaskController');
+Route::put('/tasks_{task}','Api_controllers\TaskController@checkoff');
+
